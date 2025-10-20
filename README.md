@@ -24,3 +24,11 @@ export Qt6_DIR=$QT_INSTALLATION_DIR/gcc_64/lib/cmake/Qt6
 export CMAKE_PREFIX_PATH=$Qt6_DIR:$CMAKE_PREFIX_PATH
 
 ./utils/installation.sh
+
+cd ~/ase_riscv_gem5_sim/Tools
+git clone https://github.com/riscv-collab/riscv-gnu-toolchain.git
+cd riscv-gnu-toolchain
+sudo apt install autoconf automake autotools-dev curl libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev -y
+./configure --prefix=$HOME/ase_riscv_gem5_sim/Tools/riscv
+make -j$(nproc)
+
