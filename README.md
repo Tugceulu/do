@@ -32,3 +32,8 @@ sudo apt install autoconf automake autotools-dev curl libmpc-dev libmpfr-dev lib
 ./configure --prefix=$HOME/ase_riscv_gem5_sim/Tools/riscv
 make -j$(nproc)
 
+sudo apt update
+sudo apt install autoconf automake autotools-dev curl python3 libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev git libexpat1-dev
+./configure --prefix=$HOME/ase_riscv_gem5_sim/tools/riscv
+
+
