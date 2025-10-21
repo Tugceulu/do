@@ -37,3 +37,11 @@ sudo apt install autoconf automake autotools-dev curl python3 libmpc-dev libmpfr
 ./configure --prefix=$HOME/ase_riscv_gem5_sim/tools/riscv
 
 
+ls ~/ase_riscv_gem5_sim/tools/riscv/bin
+make clean
+./configure --prefix=$HOME/ase_riscv_gem5_sim/tools/riscv
+make newlib -j$(nproc)
+ls ~/ase_riscv_gem5_sim/tools/riscv/bin
+echo 'export PATH=$HOME/ase_riscv_gem5_sim/tools/riscv/bin:$PATH' >> ~/.bashrc
+source ~/.bashrc
+riscv64-unknown-elf-gcc --version
